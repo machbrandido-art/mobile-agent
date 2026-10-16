@@ -44,6 +44,8 @@ example
 
 
 *.apk
+!apk-distribution/app-debug.apk
+!apk-distribution/app-debug.apk.sha256
 
 # Local Expo module Android build output
 /modules/*/android/build/
