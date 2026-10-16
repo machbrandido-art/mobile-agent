@@ -1,0 +1,6 @@
+{
+  "name": "Mobile Agent",
+  "description": "On-device AI assistant with models, skills, tools, and background agent capabilities",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

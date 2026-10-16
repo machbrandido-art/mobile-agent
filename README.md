@@ -1,36 +1,28 @@
-# Mobile Agent
+# Mobile Agent (Android)
 
-Mobile Agent is an open-source AI agent built specifically for mobile devices that runs entirely on your phone.
+Mobile Agent is an open-source, autonomous AI agent application built natively for Android using Kotlin and Jetpack Compose. It runs on-device models with Google AI Edge LiteRT, supports external cloud reasoning providers, connects to Model Context Protocol (MCP) servers, and executes modular skills with full Android filesystem and process tools.
 
-## Demo
+## Key Features
 
-[![Mobile Agent demo](https://img.youtube.com/vi/_P_SQ0MW-aU/maxresdefault.jpg)](https://youtu.be/_P_SQ0MW-aU?si=klxA4b7RU3Y2j5iy)
+- **On-Device & Cloud Intelligence**: Run local neural models (Google Gemma 4 E2B, Gemma 4 E4B, Qwen3 0.6B) completely offline via hardware-accelerated NPU/GPU inference, or connect to cloud models (Google Gemini 2.5 Flash, Anthropic Claude 3.5 Sonnet, OpenAI GPT-4o, Ollama).
+- **Three Operational Agent Modes**:
+  - **Build**: Full autonomous execution with tools for file operations, workspace inspection, and code generation.
+  - **Plan**: Deep architectural decomposition, breaking problems down into structured planning steps before taking action.
+  - **Ask**: Pure advisory, diagnostic, and code review mode without state mutation.
+- **Model Context Protocol (MCP)**: Native integration for MCP servers across `stdio` pipes and Server-Sent Events (`sse`), exposing tools and contextual resources directly to the agent.
+- **Skills System**: Extensible skills catalog (including `android-cli`, `saf-file-operations`, `termux-stream`, `shadcn`, and `web-search`) providing dynamic system prompts and execution recipes.
+- **Execution Terminal & Console**: Live streaming console for agent diagnostics, system checks, and interactive shell execution.
+- **Persistent Agent Memory**: Retains user preferences, hardware specs, and project conventions across conversations.
+- **Scheduled Background Jobs**: Background agent tasks managed via Android AlarmManager and WorkManager.
+- **Library & Artifacts**: Reusable prompt templates, workspace document viewer, and generated application artifacts.
 
-## Features
+## Tech Stack
 
-- On-device models that can run completely offline
-- Runs completely on-device
-- No external server required
-- MCP support
-- Skills system
-- Persistent memory
-- Multi-modal support
-- Direct access to phone's internal storage
-- Android permission-based access
-- Community plugins
-
-## Installation
-
-The application is distributed through GitHub Releases.
-
-1. Download the latest APK from the Releases page.
-2. Install the APK on your Android device.
-3. Grant the required permissions.
-4. Start using Mobile Agent.
-
-## Contributing
-
-Contributions are welcome. Feel free to open an issue for bug reports, feature requests, or submit a pull request if you'd like to contribute.
+- **Platform**: Android SDK 35/36 (Kotlin 2.0.21)
+- **UI Framework**: Jetpack Compose with Material Design 3 (M3)
+- **Architecture**: MVVM with Kotlin Coroutines and reactive StateFlow
+- **Inference Runtimes**: Google AI Edge LiteRT LM & Gemini Cloud
+- **Build System**: Gradle 9.3.1 (Kotlin DSL) with Android Gradle Plugin (AGP) 8.8.2
 
 ## License
 
